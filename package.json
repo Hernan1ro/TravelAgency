@@ -1,0 +1,14 @@
+{
+  "name": "agencia-de-viajes",
+  "version": "1.0.0",
+  "description": " A web page that displays some of the most beutiful places of the world and allows customers to book their trips",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js"
+  },
+  "author": "Hernan Mercado",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.2"
+  }
+}
