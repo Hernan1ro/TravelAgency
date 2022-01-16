@@ -4,7 +4,8 @@
   "description": " A web page that displays some of the most beutiful places of the world and allows customers to book their trips",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon index.js"
+    "dev": "nodemon index.js",
+    "start": "node index.js"
   },
   "type": "module",
   "author": "Hernan Mercado",
