@@ -12,7 +12,18 @@ const guardarTestimonial = (req, res) => {
   if (mensaje.trim() === "") {
     errores.push({ mensaje: "El mensaje está vacío" });
   }
-  console.log(errores);
+  if (errores.length > 0) {
+    //Mostrar errores en pantalla
+    res.render("testimoniales", {
+      pagina: "Testimoniales",
+      errores,
+      nombre,
+      correo,
+      mensaje,
+    });
+  } else {
+    // Almacenar en la base de datos
+  }
 };
 
 export { guardarTestimonial };

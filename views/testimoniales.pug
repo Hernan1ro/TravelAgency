@@ -4,20 +4,22 @@ block contenido
   main.container.mt-5
     h1.text-center.mt-5 #{pagina}
     .row
-
-      h2.d-block.w-100.text-center Agrega un testimonial
-
+      .col-md-12
+        h2.d-block.w-100.text-center Agrega un testimonial
+        if(errores)
+          each error in errores
+            .alert.col.alert-danger.text-center= error.mensaje
       .row.justify-content-center.col
         .col-md-8 
           form(action="/testimoniales" method="POST")
             .from-group
               label(for="nombre") Nombre
-              input#nombre(type="text", placeholder="Tu nombre", name="nombre", class="form-control")
+              input#nombre(value = nombre, type="text", placeholder="Tu nombre", name="nombre", class="form-control")
             .from-group
               label(for="correo") Correo Electrónico
-              input#correo(type="text", placeholder="Tu correo", name="correo", class="form-control")
+              input#correo(value= correo, type="text", placeholder="Tu correo", name="correo", class="form-control")
             .from-group
               label(for="mensaje") Mensaje
-              textarea#mensaje(class="form-control", name="mensaje", placeholder="Tu mensaje", rows=3)
+              textarea#mensaje(value= mensaje, class="form-control", name="mensaje", placeholder="Tu mensaje", rows=3)= mensaje
 
             input.btn.btn-success.btn-block.mt-2(type="submit")
