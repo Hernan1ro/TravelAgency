@@ -14,5 +14,8 @@
     "mysql2": "^2.3.3",
     "pug": "^3.0.2",
     "sequelize": "^6.13.0"
+  },
+  "devDependencies": {
+    "dotenv": "^12.0.4"
   }
 }
