@@ -11,11 +11,6 @@ db.authenticate()
   .then(() => console.log("Base de datos conectada"))
   .catch((err) => console.log(err));
 
-// Definir host
-const host = process.env.HOST || "0.0.0.0";
-// Definir puerto
-// const port = process.env.PORT || 4000;
-
 // Habilitar pug
 app.set("view engine", "pug");
 
@@ -35,12 +30,19 @@ app.use(express.static("public"));
 // Agregar router
 app.use("/", router);
 
+// Definir host
+// const host = process.env.HOST || "0.0.0.0";
+const host = "0.0.0.0";
+
+// Definir puerto
+// const port = process.env.PORT || 4000;
+
 var port_number = process.env.PORT || 3000;
 
 // app.listen(port_number);
 
 app.listen(port_number, host, () => {
   console.log(
-    `El servidor estáa funcionando en el puerto ${port_number} y host ${host}`
+    `El servidor está funcionando en el puerto ${port_number} y host ${host}`
   );
 });
