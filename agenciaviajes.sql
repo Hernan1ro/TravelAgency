@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 17, 2022 at 02:12 AM
+-- Generation Time: Jan 18, 2022 at 05:21 AM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.1.1
 
@@ -39,22 +39,9 @@ CREATE TABLE `testimoniales` (
 --
 
 INSERT INTO `testimoniales` (`id`, `nombre`, `correo`, `mensaje`) VALUES
-(1, 'Hernan David', 'Hernandmf@gmail.com', 'perro'),
-(2, 'Lina campo niño', 'linuxcampo@gmail.com', 'Lo mejor que me ha pasado'),
-(3, 'Saiga furinji', 'saiga@ryozhanpaku.com', 'Kuruinuki!');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `testimoniales_sql`
---
-
-CREATE TABLE `testimoniales_sql` (
-  `id` int(11) NOT NULL,
-  `nombre` varchar(60) NOT NULL,
-  `correo` varchar(60) NOT NULL,
-  `mensaje` text DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+(1, 'Hernan David', 'Hernandmf@gmail.com', 'Las mejores vacaciones que puedas imaginas'),
+(2, 'Lina campo niño', 'linuxcampo@gmail.com', 'Lo mejor que me ha pasado, todo muy barato'),
+(3, 'Saiga furinji', 'saiga@ryozhanpaku.com', 'Perfecto para ir de entrenamiento a Japón');
 
 -- --------------------------------------------------------
 
@@ -97,12 +84,6 @@ ALTER TABLE `testimoniales`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `testimoniales_sql`
---
-ALTER TABLE `testimoniales_sql`
-  ADD PRIMARY KEY (`id`);
-
---
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -111,12 +92,6 @@ ALTER TABLE `testimoniales_sql`
 --
 ALTER TABLE `testimoniales`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-
---
--- AUTO_INCREMENT for table `testimoniales_sql`
---
-ALTER TABLE `testimoniales_sql`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
