@@ -17,7 +17,7 @@
     "heroku": "^7.59.2",
     "mysql2": "^2.3.3",
     "pug": "^3.0.2",
-    "sequelize": "^6.13.0"
+    "sequelize": "^4.42.0"
   },
   "devDependencies": {
     "mysqldump": "^3.2.0"
